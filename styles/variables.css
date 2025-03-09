@@ -1,1 +1,18 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+
+:root {
+  --bg-grad-main-color: #d3d3d3;
+
+  --bg-header-color: #fff;
+  
+  --padding-header: 102px;
+  --main-font: "Inter", sans-serif;
+  --accent-font: "PressStart2P", monospace;
+
+  --page-gap: 52px;
+
+  --main-font-size: 18px;
+  --font-lh: 21px;
+  --watermark-font-size: 14px;
+}
