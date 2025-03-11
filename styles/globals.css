@@ -52,14 +52,10 @@ ol {
   white-space: nowrap;
 }
 
-a, button {
-  transition: 0.1s linear;
-  cursor: pointer;
-  border: none;
-  background-color: transparent;
-  color: currentColor;
-  font-size: inherit;
-  line-height: inherit;
-  font-family: inherit;
-  padding: 0;
+button:focus {
+  outline: none;
+}
+
+svg {
+  display: block;
 }

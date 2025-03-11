@@ -37,7 +37,3 @@
 .filter-effect {
   filter: invert(0.2) saturate(130%) hue-rotate(100deg) blur(5px);
 }
-
-svg {
-  display: block;
-}
