@@ -42,8 +42,9 @@
                 Место для ваших воспоминаний о начале обучения.
               </p>
               <div class="card__button-container">
-                <button class="card__icon-button">
+                <button class="card__icon-button" type="button">
                   <svg
+                    aria-hidden="true"
                     class="like-icon"
                     xmlns="http://www.w3.org/2000/svg"
                     width="39"
@@ -74,7 +75,7 @@
                     />
                   </svg>
                 </button>
-                <button class="card__like-button box-button">
+                <button class="card__like-button box-button" type="button">
                   <span class="button__text">Like</span>
                 </button>
               </div>
@@ -105,8 +106,9 @@
                 Место для ваших воспоминаний о начале первого спринта.
               </p>
               <div class="card__button-container">
-                <button class="card__icon-button">
+                <button class="card__icon-button" type="button">
                   <svg
+                    aria-hidden="true"
                     class="like-icon"
                     xmlns="http://www.w3.org/2000/svg"
                     width="39"
@@ -137,7 +139,7 @@
                     />
                   </svg>
                 </button>
-                <button class="card__like-button box-button">
+                <button class="card__like-button box-button" type="button">
                   <span class="button__text">Like</span>
                 </button>
               </div>
@@ -165,8 +167,9 @@
                 Место для ваших воспоминаний об окончании первого спринта.
               </p>
               <div class="card__button-container">
-                <button class="card__icon-button">
+                <button class="card__icon-button" type="button">
                   <svg
+                    aria-hidden="true"
                     class="like-icon"
                     xmlns="http://www.w3.org/2000/svg"
                     width="39"
@@ -197,7 +200,7 @@
                     />
                   </svg>
                 </button>
-                <button class="card__like-button box-button">
+                <button class="card__like-button box-button" type="button">
                   <span class="button__text">Like</span>
                 </button>
               </div>
@@ -227,8 +230,9 @@
                 Место для ваших воспоминаний о начале второго спринта.
               </p>
               <div class="card__button-container">
-                <button class="card__icon-button">
+                <button class="card__icon-button" type="button">
                   <svg
+                    aria-hidden="true"
                     class="like-icon"
                     xmlns="http://www.w3.org/2000/svg"
                     width="39"
@@ -259,7 +263,7 @@
                     />
                   </svg>
                 </button>
-                <button class="card__like-button box-button">
+                <button class="card__like-button box-button" type="button">
                   <span class="button__text">Like</span>
                 </button>
               </div>
@@ -290,8 +294,9 @@
                 Место для ваших воспоминаний об окончании второго спринта.
               </p>
               <div class="card__button-container">
-                <button class="card__icon-button">
+                <button class="card__icon-button" type="button">
                   <svg
+                    aria-hidden="true"
                     class="like-icon"
                     xmlns="http://www.w3.org/2000/svg"
                     width="39"
@@ -322,7 +327,7 @@
                     />
                   </svg>
                 </button>
-                <button class="card__like-button box-button">
+                <button class="card__like-button box-button" type="button">
                   <span class="button__text">Like</span>
                 </button>
               </div>
@@ -350,8 +355,9 @@
                 Место для ваших воспоминаний о начале третьего спринта.
               </p>
               <div class="card__button-container">
-                <button class="card__icon-button">
+                <button class="card__icon-button" type="button">
                   <svg
+                    aria-hidden="true"
                     class="like-icon"
                     xmlns="http://www.w3.org/2000/svg"
                     width="39"
@@ -382,7 +388,7 @@
                     />
                   </svg>
                 </button>
-                <button class="card__like-button box-button">
+                <button class="card__like-button box-button" type="button">
                   <span class="button__text">Like</span>
                 </button>
               </div>
@@ -412,8 +418,9 @@
                 Место для ваших воспоминаний об окончании третьего спринта.
               </p>
               <div class="card__button-container">
-                <button class="card__icon-button">
+                <button class="card__icon-button" type="button">
                   <svg
+                    aria-hidden="true"
                     class="like-icon"
                     xmlns="http://www.w3.org/2000/svg"
                     width="39"
@@ -444,7 +451,7 @@
                     />
                   </svg>
                 </button>
-                <button class="card__like-button box-button">
+                <button class="card__like-button box-button" type="button">
                   <span class="button__text">Like</span>
                 </button>
               </div>
@@ -476,8 +483,9 @@
                 чувствуете в этой точке пути.
               </p>
               <div class="card__button-container">
-                <button class="card__icon-button">
+                <button class="card__icon-button" type="button">
                   <svg
+                    aria-hidden="true"
                     class="like-icon"
                     xmlns="http://www.w3.org/2000/svg"
                     width="39"
@@ -508,7 +516,7 @@
                     />
                   </svg>
                 </button>
-                <button class="card__like-button box-button">
+                <button class="card__like-button box-button" type="button">
                   <span class="button__text">Like</span>
                 </button>
               </div>
@@ -522,16 +530,17 @@
         onclick="window['dialog-id'].showModal()"
         aria-controls="dialog-id"
       >
-        <svg viewBox="0 0 40 40">
+        <svg viewBox="0 0 40 40" aria-hidden="true">
           <use href="./svg/floppy.svg#disk"></use>
         </svg>
         <span class="button__text">Сохранить на память</span>
       </button>
       <dialog id="dialog-id">
         <div class="dialog__text-container">
-          <svg viewBox="0 0 40 40">
+          <svg viewBox="0 0 40 40" aria-hidden="true">
             <use href="./svg/floppy.svg#disk"></use>
           </svg>
+          <p class="visually-hidden">Закрыть окно</p>
           <p>Вставьте дискету, чтобы продолжить</p>
         </div>
         <form method="dialog">
