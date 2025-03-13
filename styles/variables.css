@@ -17,4 +17,8 @@
   --font-lh: 21px;
   --watermark-font-size: 14px;
   --main-border: 2px solid #000;
+
+  --contour-color: #000;
+  --animation-fill-color: #f00;
+  --transition-effect: fill linear 0.3s
 }

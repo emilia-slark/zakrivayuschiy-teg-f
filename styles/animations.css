@@ -10,6 +10,95 @@
 
 */
 
+@keyframes sparkles-effect {
+
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: var(--animation-fill-color);
+  }
+}
+
+@keyframes expansion-effect {
+
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.25);
+  }
+}
+
+.like-icon__sparks {
+  fill: var(--animation-fill-color);
+}
+
+.like-icon__core,
+.like-icon__main-body,
+.like-icon__sparks {
+  fill: transparent;
+}
+
+.like-icon__contour {
+  fill: var(--contour-color);
+  transition: fill linear 0.1s;
+}
+
+.like-icon__core {
+  transition: var(--transition-effect) 0.03s;
+}
+
+.like-icon__main-body {
+  transition: var(--transition-effect);
+}
+
+.card__icon-button:hover :is(.like-icon__main-body, .like-icon__core) {
+  fill: var(--contour-color);
+}
+
+.card__icon-button:active :is(.like-icon__main-body, .like-icon__core) {
+  fill: var(--animation-fill-color);
+}
+
+.card__icon-button:is(:hover, :active) .like-icon__main-body {
+  transition: var(--transition-effect) 0.05s;
+}
+
+.card__icon-button:is(:hover, :active) .like-icon__core {
+  transition: var(--transition-effect);
+}
+
+.like-icon.is-liked .like-icon__contour {
+  transition: var(--transition-effect) 0.06s;
+}
+
+.like-icon.is-liked .like-icon__core {
+  transition: var(--transition-effect);
+}
+
+.like-icon.is-liked .like-icon__main-body {
+  transition: var(--transition-effect) 0.05s;
+}
+
+.like-icon.is-liked :is(.like-icon__contour, .like-icon__main-body, .like-icon__core) {
+  fill: var(--animation-fill-color);
+}
+
+.like-icon.is-liked .like-icon__sparks {
+  animation: sparkles-effect ease-in 0.3s 0.3s;
+}
+
+.like-icon.is-liked {
+  animation: expansion-effect ease-in 0.3s 0.1s;
+}
+
+
+/* ---------------------------------- */
+
+
 .filter-grayscale {
   filter: grayscale(75%);
 }

@@ -38,6 +38,7 @@
   min-inline-size: 375px;
   min-block-size: 100dvb;
   font-family: var(--main-font);
+  font-variation-settings: "wght" 400, "slnt" 0;
 }
 
 @supports (font-variation-settings: normal) {
@@ -53,7 +54,7 @@
   align-items: center;
   gap: 20px;
   background-color: var(--bg-main-color);
-  padding-inline: clamp(0.875rem, -1.4688rem + 10vw, 7.53125rem);
+  /* padding-inline: clamp(0.875rem, -1.4688rem + 10vw, 7.53125rem); */
   padding-block: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem);
   font-weight: 400;
   font-family: 'PressStart2P', monospace;
@@ -86,7 +87,6 @@ main {
   background-color: var(--bg-main-color);
   font-size: var(--main-font-size);
   line-height: var(--font-lh);
-  font-variation-settings: "wght" 400, "slnt" 0;
 }
 
 .card__title {
@@ -123,6 +123,13 @@ main {
     0 -1px #fff;
 }
 
+@supports (-webkit-text-stroke: 1px #fff) {
+  .watermark {
+    -webkit-text-stroke: 1px #fff;
+    text-shadow: none;
+  }
+}
+
 .card__text-container {
   display: flex;
   flex-direction: column;
@@ -142,11 +149,11 @@ main {
   cursor: pointer;
   border: var(--main-border);
   background-color: var(--bg-main-color);
+  isolation: isolate;
+  overflow: hidden;
   font-size: var(--watermark-font-size);
   line-height: 0.9;
   font-family: var(--accent-font);
-  isolation: isolate;
-  overflow: hidden;
 
   &:focus-visible {
     box-shadow: 2px 2px 0px 0px #000;
@@ -156,11 +163,11 @@ main {
     position: absolute;
     transform: scaleX(0);
     transform-origin: left;
+    z-index: 0;
     transition: transform 0.3s linear;
     inset: 0;
     background-color: #000;
     content: '';
-    z-index: 0;
   }
   
   &:hover::after {
@@ -170,9 +177,9 @@ main {
 
 .button__text {
   position: relative;
-  mix-blend-mode: difference;
-  color: var(--text-color);
   z-index: 1;
+  mix-blend-mode: difference;
+  color: var(--bg-main-color);
 }
 
 .card__button-container {
@@ -180,10 +187,6 @@ main {
   justify-content: end;
   align-items: center;
   gap: 6px;
-}
-
-.card__icon-button {
-  border: none;
 }
 
 .card__like-button {
@@ -200,8 +203,11 @@ main {
 }
 
 .save-button svg {
-  aspect-ratio: 1 / 1;
+  position: relative;
+  z-index: 2;
+  mix-blend-mode: difference;
   inline-size: 22px;
+  color: var(--bg-main-color);
 }
 
 #dialog-id {
@@ -246,5 +252,15 @@ main {
 @media (width <= 375px) {
   .save-button {
     flex-direction: column;
+    gap: 10px;
+
+    svg {
+      inline-size: 27px;
+    }
+  }
+
+  .watermark {
+    top: 19px;
+    right: 11px;
   }
 }
